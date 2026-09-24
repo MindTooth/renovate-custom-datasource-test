@@ -1,0 +1,2 @@
+calendar=5.5.6
+contacts=7.3.6

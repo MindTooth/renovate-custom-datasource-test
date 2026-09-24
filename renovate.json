@@ -14,6 +14,17 @@
       ],
       "datasourceTemplate": "unity3d-packages",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^nextcloud-deps\\.txt$/"
+      ],
+      "matchStrings": [
+        "(?<depName>[a-z_]+)=(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "nextcloud",
+      "versioningTemplate": "semver"
     }
   ],
   "packageRules": [
@@ -34,6 +45,33 @@
         "com.unity.cinemachine"
       ],
       "allowedVersions": "<=3.1.2"
+    },
+    {
+      "matchDatasources": [
+        "nextcloud"
+      ],
+      "registryUrls": [
+        "https://apps.nextcloud.com/api/v1/platform/30.0.0/apps.json"
+      ],
+      "groupName": "Nextcloud app changelog comparison"
+    },
+    {
+      "matchDatasources": [
+        "nextcloud"
+      ],
+      "matchPackageNames": [
+        "calendar"
+      ],
+      "allowedVersions": "<=5.5.9"
+    },
+    {
+      "matchDatasources": [
+        "nextcloud"
+      ],
+      "matchPackageNames": [
+        "contacts"
+      ],
+      "allowedVersions": "<=7.3.9"
     }
   ],
   "automerge": false
