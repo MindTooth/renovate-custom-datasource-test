@@ -25,6 +25,17 @@
       ],
       "datasourceTemplate": "nextcloud",
       "versioningTemplate": "semver"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^nuget-deps\\.txt$/",
+        "/^pulumi-deps\\.txt$/"
+      ],
+      "matchStrings": [
+        "(?<depName>[A-Za-z][A-Za-z0-9.]+)=(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "nuget"
     }
   ],
   "packageRules": [
@@ -72,7 +83,39 @@
         "contacts"
       ],
       "allowedVersions": "<=7.3.9"
+    },
+    {
+      "matchDatasources": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "NuGet.Common",
+        "NuGet.Configuration"
+      ],
+      "allowedVersions": "<=7.9.0"
+    },
+    {
+      "matchDatasources": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "Pulumi"
+      ],
+      "allowedVersions": "<=3.114.0"
+    },
+    {
+      "matchDatasources": [
+        "nuget"
+      ],
+      "matchPackageNames": [
+        "Pulumi.Aws"
+      ],
+      "allowedVersions": "<=7.48.0"
     }
   ],
-  "automerge": false
+  "automerge": false,
+  "extends": [
+    "group:nugetMonorepo",
+    "group:pulumi"
+  ]
 }
