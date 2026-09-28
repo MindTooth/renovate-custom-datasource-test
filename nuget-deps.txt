@@ -1,0 +1,2 @@
+NuGet.Common=7.6.0
+NuGet.Configuration=7.6.0
