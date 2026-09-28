@@ -1,2 +1,2 @@
-Pulumi=3.113.3
-Pulumi.Aws=7.47.0
+Pulumi=3.114.0
+Pulumi.Aws=7.48.0
