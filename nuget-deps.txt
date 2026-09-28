@@ -1,2 +1,2 @@
-NuGet.Common=7.6.0
-NuGet.Configuration=7.6.0
+NuGet.Common=7.9.0
+NuGet.Configuration=7.9.0
