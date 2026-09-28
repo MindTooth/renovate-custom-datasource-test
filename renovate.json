@@ -118,5 +118,6 @@
   "extends": [
     "group:nugetMonorepo",
     "group:pulumi"
-  ]
+  ],
+  "dependencyDashboard": true
 }
