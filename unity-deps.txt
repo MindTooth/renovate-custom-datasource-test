@@ -1,2 +1,2 @@
-com.unity.inputsystem=1.13.0
-com.unity.cinemachine=3.1.0
+com.unity.inputsystem=1.15.0
+com.unity.cinemachine=3.1.2
